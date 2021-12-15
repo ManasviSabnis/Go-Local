@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoLocal</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/home.css">
+
+    <!-- #ff8210 Orange -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#"><img src="../static/assets/GoLocalWhite.svg" alt=""
+                style="height: 50px; width:auto;"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+                   
+                </li>
+            </ul>
+        </div>
+    </nav><br><br>
+
+
+    <!-- Nav section -->
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item1">
+            <a class="nav-link active" id="pills-food-tab" data-toggle="pill" href="#pills-food" role="tab"
+                aria-controls="pills-food" aria-selected="true">Food</a>
+        </li>
+        <li class="nav-item1">
+            <a class="nav-link" id="pills-clothing-tab" data-toggle="pill" href="#pills-clothing" role="tab"
+                aria-controls="pills-clothing" aria-selected="false">Clothing</a>
+        </li>
+        <li class="nav-item1">
+            <a class="nav-link" id="pills-accessories-tab" data-toggle="pill" href="#pills-accessories" role="tab"
+                aria-controls="pills-accessories" aria-selected="false">Accessories</a>
+        </li>
+    </ul>
+    
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab">
+            <center class="section-info">Our best food products, locally sourced</center>   
+            <div class="card-section card-deck">
+                <div class="card card-custom">
+                    <img class="card-img-top" src="/static/assets/bhakarwadi.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Bhakarwadi</h4>
+                        <h6 class="card-title">Manasvi Sabnis</h6>
+                        <p class="card-text">Fresh homemade Bhakarwadi</p>
+                        <p class="card-text">Expire Date: 30/11/2021</p>
+                        <h6 class="card-title">Units in Stock:10 kgs</h6>
+                        <h5 class="price-element">Rs.500 per kg </h5>
+                        
+                    </div>
+                </div>
+            
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Prodcut Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.
+                        </p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Prodcut Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.
+                        </p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-clothing" role="tabpanel" aria-labelledby="pills-clothing-tab">
+            <center class="section-info">Clothing sourced directly from small handlooms</center>
+            <div class="card-section card-deck">
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Product Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores saepe.</p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Prodcut Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.
+                        </p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Prodcut Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.
+                        </p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-accessories" role="tabpanel" aria-labelledby="pills-accessories-tab">
+            <center class="section-info">Various handmade accessories, made like art</center>
+            <div class="card-section card-deck">
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Product Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores saepe.</p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Prodcut Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.
+                        </p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+                <div class="card card-custom">
+                    <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+                    <div class="card-body">
+                        <h4 class="card-title">Prodcut Name</h4>
+                        <h6 class="card-title">Seller Name</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.
+                        </p>
+                        <h6 class="card-title">Units in Stock</h6>
+                        <h5 class="price-element">$50</h5>
+                        
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Section -->
+    <!-- <div class="card-section card-deck">
+    <div class="card card-custom">
+        <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+        <div class="card-body">
+            <h4 class="card-title">Product Name</h4>
+            <h6 class="card-title">Seller Name</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores saepe.</p>
+            <h5 class="price-element">$50</h5>
+            <a href="#" class="btn btn-primary">Go to product</a>
+        </div>
+    </div>
+
+    <div class="card card-custom">
+        <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+        <div class="card-body">
+            <h4 class="card-title">Prodcut Name</h4>
+            <h6 class="card-title">Seller Name</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.</p>
+            <h5 class="price-element">$50</h5>
+            <a href="#" class="btn btn-primary">Go to product</a>
+        </div>
+    </div>
+
+    <div class="card card-custom">
+        <img class="card-img-top" src="../static/assets/test.jpg" alt="alt text">
+        <div class="card-body">
+            <h4 class="card-title">Prodcut Name</h4>
+            <h6 class="card-title">Seller Name</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maiores lab saepe.</p>
+            <h5 class="price-element">$50</h5>
+            <a href="#" class="btn btn-primary">Go to product</a>
+        </div>
+    </div>
+
+    </div> -->
+</body>
+
+</html>

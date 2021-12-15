@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product - Dashboard HTML Template</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/dashboard.css">
+    <!--
+	Product Admin CSS Template
+	https://templatemo.com/tm-524-product-admin
+	-->
+  </head>
+  <body>
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+    <div class="back-redirect">
+      <a href="/"><button class="btn btn-black"><i class="fa fa-sign-out sign-out"></i> Logout</button></a>
+    </div>
+    <div class="dashboard-form">
+    <div class="container tm-mt-big tm-mb-big dashboard-card">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="tm-block-title d-inline-block">Add Product</h2>
+              </div>
+            </div>
+            <div class="row tm-edit-product-row">
+              <div class="col-xl-10 col-lg-10 col-md-12">
+                <form action='/create' class="tm-edit-product-form" method="POST">
+                  <div class="form-group mb-3">
+                    <label id="Product" type="text" name="Product">Product Name
+                    </label>
+                    <input id="Product" name="Product" type="text" class="form-control validate" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label id="SellerName" name="SellerName" type="text">Seller Name
+                    </label>
+                    <input id="SellerName" name="SellerName" type="text" class="form-control validate" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="Description">Description</label>
+                    <textarea class="form-control validate" id="Description"  name="Description" rows="3" required="Yes"></textarea>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label name="Category" >Category</label>
+                    <select class="custom-select tm-select-accounts" id="Category" name="Category">
+                      <option selected="" name="Category">Select category</option>
+                      <option value="1">Food</option>
+                      <option value="2">Clothing</option>
+                      <option value="3">Accessories</option>
+                    </select>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="Price">Price</label>
+                    <textarea class="form-control validate" id="Price"  name="Price" rows="3" required=""></textarea>
+                  </div>
+                  <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label for="expire_date">Expire Date
+                          </label>
+                          <input id="expire_date" name="expire_date" type="text" class="form-control validate hasDatepicker" data-large-mode="true">
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label for="UnitsInStock">Units In Stock
+                          </label>
+                          <input  type="text" name='UnitsInStock' id='UnitsInStock' class="form-control validate" required="">
+                        </div>
+                  </div>
+                  
+              </div>
+              <!-- <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                <div class="tm-product-img-dummy mx-auto">
+                  
+                </div> -->
+
+
+                <div class="custom-file col-xl-10 col-lg-10 col-md-12">
+                  
+                  <!-- <input id="fileInput" type="file" style="display:none;"> -->
+                  <label for="file" style="cursor: pointer;"><i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="loadFile(event)" style="margin-right: 10px;""></i></label>
+                  <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="margin-bottom: 25px;">
+                
+                  <img id="output" width="200" />
+                  <div class="text-center" >
+                </div>
+
+              <input type="submit" value="Add Product">
+              </div>
+                  </form>
+                  <script>
+                  var loadFile = function(event) {
+                    var image = document.getElementById('output');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                  };
+                  </script>
+                </div>
+              
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="jquery-ui-datepicker/jquery-ui.min.js"></script>
+    <!-- https://jqueryui.com/download/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script>
+      $(function() {
+        $("#expire_date").datepicker();
+      });
+    </script>
+  
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+</div>
+</body>
+</html>

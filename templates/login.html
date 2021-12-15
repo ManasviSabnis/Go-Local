@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoLocal</title>
+  
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel='stylesheet' type="text/css" href="{{url_for('static', filename='login.css') }}">
+</head>
+<body>
+<div class="back-redirect">
+  <a href="/"><button class="btn btn-dark"><i class="fa fa-arrow-left back-arrow"></i> Back to Home</button></a>
+</div>
+<div className="signup-form">
+  <form action="/dashboard" method="get" class="box-outer">
+    <h2>Login</h2>
+    <hr color="black">
+    <!-- <div class="form-group">
+        <label for="InputEmail">Email address</label>
+        <input name="email" class="form-control input-lg" id="InputEmail"  placeholder="Enter email"> -->
+        <div class="form-group">
+          <label for="InputEmail">Email address</label>
+          <input type="text" class="form-control input-lg" name="email" id="InputEmail" placeholder="Enter email" required="required">
+        </div>
+        
+  
+    <!-- <div class="form-group">
+        <label for="InputPassword">Password</label>
+        <input type="password" name="password" class="form-control input-lg" id="InputPassword" placeholder="Password">
+    </div> -->
+    <div class="form-group">
+      <label for="InputPassword">Password</label>
+      <input type="password" class="form-control input-lg" name="password" id="InputPassword" placeholder="Enter password" required="required">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-block btn-lg signup-btn">Login</button>
+  </form>
+  <br>
+            <div>
+                Don't have an account? <a href="/index">Sign up here</a>.
+            </div>
+</div>
+</body>
+</html>
